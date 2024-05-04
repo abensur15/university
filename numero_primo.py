@@ -20,7 +20,7 @@ num = int(input())
 
 # * Entrada limitada para apenas numeros positivos, incluindo 0
 if num >= 0:
-#  - A entrada termina em 0 (nao eh um caso de execucao)
+#  * Entrada termina em 0 (nao eh um caso de execucao)
 	while num != 0:
 		if primo(num):
 			print("{}: primo".format(num))
