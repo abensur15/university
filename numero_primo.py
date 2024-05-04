@@ -19,12 +19,11 @@ def primo(num):
 num = int(input())
 
 # * Entrada limitada para apenas numeros positivos, incluindo 0
-if num >= 0:
-#  * Entrada termina em 0 (nao eh um caso de execucao)
-	while num != 0:
-		if primo(num):
-			print("{}: primo".format(num))
-		else:
-			print("{}: composto".format(num))
-			
-		num = int(input())
+# * Entrada termina em 0 (nao eh um caso de execucao)
+while num != 0 and num >= 0:
+    if primo(num):
+        print("{}: primo".format(num))
+    else:
+        print("{}: composto".format(num))
+    
+    num = int(input())
