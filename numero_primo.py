@@ -15,7 +15,6 @@ def primo(num):
 	
 	return True
 
-# Programa principal
 # * Entrada limitada para apenas numeros positivos, incluindo 0
 if num >= 0:
 	numero = int(input())
