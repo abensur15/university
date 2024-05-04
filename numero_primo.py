@@ -15,15 +15,16 @@ def primo(num):
 	
 	return True
 
+# Leitura do numero
+num = int(input())
+
 # * Entrada limitada para apenas numeros positivos, incluindo 0
 if num >= 0:
-	numero = int(input())
-
 #  - A entrada termina em 0 (nao eh um caso de execucao)
-while num != 0:
-	if primo(numero):
-		print("{}: primo".format(numero))
-	else:
-		print("{}: composto".format(numero))
-		
-	numero = int(input())
+	while num != 0:
+		if primo(num):
+			print("{}: primo".format(num))
+		else:
+			print("{}: composto".format(num))
+			
+		num = int(input())
