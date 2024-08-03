@@ -3,7 +3,7 @@ package main
 import "net/http"
 
 func paginaEstatica(resposta http.ResponseWriter, requisicao *http.Request) {
-	http.ServeFile(resposta, requisicao, "./pagina_estatica.html")
+	http.ServeFile(resposta, requisicao, "./index.html")
 }
 
 func main() {
