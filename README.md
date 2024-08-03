@@ -1,2 +1,2 @@
-<h1 align="center">Universidade</h1>
-<p align="center">Alguns exercícios das disciplinas da universidade</p>
+<h1 align="center">University</h1>
+<p align="center">Some projects from university</p>
