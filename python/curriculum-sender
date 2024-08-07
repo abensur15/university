@@ -1,0 +1,92 @@
+from time import sleep
+import pyautogui as ptg
+from subprocess import run
+from keyboard import write
+
+class Curriculo:
+    def __init__(self, pasta: str, arquivo: str):
+        self.pasta = pasta
+        self.arquivo = arquivo
+
+def pressionar_tab(num: int):
+    for _ in range(num):
+        ptg.press('Tab')
+
+class Email:
+    def __init__(self, dest: str, assunto: str, corpo: str):
+        self.dest = dest
+        self.assunto = assunto
+        self.corpo = corpo
+
+    def escrever_email(self, cv: Curriculo):
+        run(r"C:\Users\enzoa\AppData\Local\Programs\Opera GX\opera.exe")
+        sleep(3)
+
+        write("gmail.com")
+        sleep(1)
+
+        ptg.press('enter')
+        sleep(5)
+
+        pressionar_tab(12)
+        sleep(1)
+
+        ptg.press('Enter')
+        sleep(2)
+
+        write(self.dest)
+        sleep(1)
+
+        pressionar_tab(2)
+        write(self.assunto)
+        
+        sleep(1)
+        pressionar_tab(1)
+
+        write(self.corpo)
+        sleep(1)
+
+        pressionar_tab(3)
+
+        ptg.press('enter')
+        sleep(2)
+
+        pressionar_tab(5)
+
+        ptg.press('enter')
+        sleep(1)
+
+        write(cv.pasta)
+        ptg.press('Enter')
+
+        sleep(1)
+        pressionar_tab(6)
+
+        write(cv.arquivo)
+        sleep(1)
+
+        ptg.press('down')
+        sleep(1)
+
+        ptg.press('Enter')
+        sleep(1)
+
+        pressionar_tab(1)
+        ptg.press('Enter')
+
+def main():
+    curriculo = Curriculo(
+        r"C:\Users\enzoa\Documents\Arquivos pessoais",
+        "CV_ENZOABENSUR"
+    )
+
+    email = Email(
+        "enzoabensur15@gmail.com",
+        "Teste",
+        "Boa noite."
+    )
+
+    email.escrever_email(curriculo)
+
+if __name__ == "__main__":
+    main()
